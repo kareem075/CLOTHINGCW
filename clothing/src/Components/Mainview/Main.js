@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import './Main.css';
 
-const products = [
-    { id: 1, name: 'Classic T-Shirt', category: 'T-Shirts', price: '150 EGP', image: '/public/images/redt.jpg'},
-    { id: 2, name: 'Graphic Tee', category: 'T-Shirts', price: '399 EGP',image: '/public/images/download.jpg'},
-    { id: 3, name: 'Striped T-Shirt', category: 'T-Shirts', price: '250 EGP',image: '/public/images/download.jpg' },
-    { id: 4, name: 'Long Sleeve Tee', category: 'T-Shirts', price: '422 EGP', image: '/public/images/longsleeve.jpeg'},
-    { id: 5, name: 'Skinny Jeans', category: 'Pants', price: '560 EGP',image: '/public/images/skinny jeans.jpg' },
-    { id: 6, name: 'Cargo Pants', category: 'Pants', price: '730 EGP', image: '/public/mages/Cargopants.jpg'},
-    { id: 7, name: 'Sweatpants', category: 'Pants', price: '220 EGP',image: '/public/images/sweatpants.jpg' }
+const productsData = [
+    { id: 1, name: 'Classic T-Shirt', category: 'T-Shirts', price: '150 EGP', image: '/images/redt.jpg'},
+    { id: 2, name: 'Graphic Tee', category: 'T-Shirts', price: '399 EGP',image: '/images/download.jpg'},
+    { id: 3, name: 'Striped T-Shirt', category: 'T-Shirts', price: '250 EGP',image: '/images/download.jpg' },
+    { id: 4, name: 'Long Sleeve Tee', category: 'T-Shirts', price: '422 EGP', image: '/images/longsleeve.jpeg'},
+    { id: 5, name: 'Skinny Jeans', category: 'Pants', price: '560 EGP',image: '/images/skinny jeans.jpg' },
+    { id: 6, name: 'Cargo Pants', category: 'Pants', price: '730 EGP', image: '/images/Cargo.jpg'},
+    { id: 7, name: 'Sweatpants', category: 'Pants', price: '220 EGP',image: '/images/sweatpants.jpg' }
 ];
 
-function Main() {
+function Main({ onLogout }) {
     const [products, setProducts] = useState(productsData);
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -25,6 +25,10 @@ function Main() {
         setProducts(filteredProducts);
     };
 
+    const handleCartClick = () => {
+        window.location.href = '/cart';
+    };
+
     return (
         <div className="main-container">
             <div className="header">
@@ -35,6 +39,10 @@ function Main() {
                     onChange={handleSearch}
                     className="search-bar"
                 />
+                <div className="cart-icon" onClick={handleCartClick}>
+                    🛒
+                </div>
+                <button onClick={onLogout} className="logout-button">Logout</button>
             </div>
             <h1>Our Products</h1>
             <div className="products-grid">
