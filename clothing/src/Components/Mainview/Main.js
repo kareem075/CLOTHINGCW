@@ -29,6 +29,10 @@ function Main({ onLogout }) {
         window.location.href = '/cart';
     };
 
+    const handleReviewsClick = () => { 
+        window.location.href = '/reviews';
+    };
+
     return (
         <div className="main-container">
             <div className="header">
@@ -55,6 +59,7 @@ function Main({ onLogout }) {
                     </div>
                 ))}
             </div>
+            <button onClick={handleReviewsClick} className="reviews-button">Reviews</button>
         </div>
     );
 }
