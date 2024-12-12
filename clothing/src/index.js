@@ -5,7 +5,7 @@ import App from './App';
 import Home from './Components/Homepage/Home';
 import Login from './Components/loginpage/Login';
 import Main from './Components/Mainview/Main'
-
+import Register from './Components/Register/Register';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,20 +1,33 @@
 import React, { useState } from 'react';
-import './login.css';
+import './Register.css';
 
-function Login() {
+function Register() {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
 
-    const handleRegisterClick = () => {
-        window.location.href = '/register';
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setMessage('Registration successful!');
+        setTimeout(() => {
+            window.location.href = '/login';
+        }, 1000);
     };
-    
+
     return (
-        <div className="login-container">
-            <h2>Login</h2>
-            <h3>No Account No problem, Register</h3>
-            <form >
+        <div className="register-container">
+            <h2>Register</h2>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                />
                 <label htmlFor="email">Email:</label>
                 <input
                     type="email"
@@ -29,16 +42,15 @@ function Login() {
                     type="password"
                     id="password"
                     name="password"
-                   value={password}
+                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                <button type="submit">Login</button>
+                <button type="submit">Register</button>
             </form>
             <div id="message">{message}</div>
-            <button onClick={handleRegisterClick} className="register-button">Register</button>
         </div>
     );
 }
 
-export default Login;
+export default Register;

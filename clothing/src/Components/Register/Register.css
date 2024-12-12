@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #7a2020;
+    background-color: #640b0b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-.login-container {
+.register-container {
     background-color: #ffffff;
     padding: 50px;
     border-radius: 30px;
@@ -17,23 +17,17 @@ body {
     text-align: center;
 }
 
-.login-container h2 {
-    margin-bottom: 30px;
-    font-size: 35px;
-}
-
-.login-container h3 {
+.register-container h2 {
     margin-bottom: 20px;
-    font-size: 15px;
 }
 
-.login-container label {
+.register-container label {
     display: block;
     margin-bottom: 8px;
     text-align: left;
 }
 
-.login-container input {
+.register-container input {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -41,26 +35,25 @@ body {
     border-radius: 4px;
 }
 
-.login-container button {
+.register-container button {
+    margin-right: 100px;
     margin-top: 20px;
     margin-left: 10px;
     width: 100%;
     padding: 8px;
-    background-color: #ae2121;
+    background-color: #a31d1d;
     color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.login-container button:hover {
+.register-container button:hover {
     background-color: #fb0b0b;
 }
 
-.register-button { 
+#message { 
+    margin-top: 10px; 
+    color: rgb(159, 8, 8);
 }
 
-#message {
-    margin-top: 10px;
-    color: rgb(149, 15, 15);
-}
