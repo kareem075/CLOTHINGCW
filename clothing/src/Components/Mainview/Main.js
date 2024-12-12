@@ -4,7 +4,7 @@ import './Main.css';
 const productsData = [
     { id: 1, name: 'Classic T-Shirt', category: 'T-Shirts', price: '150 EGP', image: '/images/redt.jpg'},
     { id: 2, name: 'Graphic Tee', category: 'T-Shirts', price: '399 EGP',image: '/images/download.jpg'},
-    { id: 3, name: 'Striped T-Shirt', category: 'T-Shirts', price: '250 EGP',image: '/images/download.jpg' },
+    { id: 3, name: 'Striped T-Shirt', category: 'T-Shirts', price: '250 EGP',image: '/images/download.jpeg' },
     { id: 4, name: 'Long Sleeve Tee', category: 'T-Shirts', price: '422 EGP', image: '/images/longsleeve.jpeg'},
     { id: 5, name: 'Skinny Jeans', category: 'Pants', price: '560 EGP',image: '/images/skinny jeans.jpg' },
     { id: 6, name: 'Cargo Pants', category: 'Pants', price: '730 EGP', image: '/images/Cargo.jpg'},
