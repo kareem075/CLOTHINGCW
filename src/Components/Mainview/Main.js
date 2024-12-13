@@ -14,6 +14,7 @@ const productsData = [
 function Main({ onLogout }) {
     const [products, setProducts] = useState(productsData);
     const [searchTerm, setSearchTerm] = useState('');
+    const [cart, setCart] = useState([]);
 
     const handleSearch = (event) => {
         const searchValue = event.target.value.toLowerCase();
@@ -25,7 +26,12 @@ function Main({ onLogout }) {
         setProducts(filteredProducts);
     };
 
+    const handleAddToCart = (product) => { 
+        setCart([...cart, product]);
+    };
+
     const handleCartClick = () => {
+        localStorage.setItem('cart', JSON.stringify(cart));
         window.location.href = '/cart';
     };
 
