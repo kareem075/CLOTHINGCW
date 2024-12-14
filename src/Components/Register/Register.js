@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 function Register() {
@@ -7,11 +8,13 @@ function Register() {
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
 
+    const navigate = useNavigate();
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setMessage('Registration successful!');
         setTimeout(() => {
-            window.location.href = '/login';
+            navigate('/login');
         }, 1000);
     };
 
@@ -54,3 +57,4 @@ function Register() {
 }
 
 export default Register;
+

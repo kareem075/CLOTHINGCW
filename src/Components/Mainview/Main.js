@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Main.css';
+import Cart from '../Cart/Cart';
+import Review from '../Review/Review';
+import Login from '../loginpage/Login';
+
 
 const productsData = [
     { id: 1, name: 'Classic T-Shirt', category: 'T-Shirts', price: '150 EGP', image: '/images/redt.jpg'},
